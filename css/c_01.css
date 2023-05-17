@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap {
+    width: 1000px;
+    margin-left: 0;
+    display: flex;
+}
+
+/* side */
+.side {
+    width: 200px;
+    height: 650px;
+}
+
+.logo {}
+
+.gnb {
+    padding: 50px 10px;
+    z-index: 1;
+}
+
+.gnb > li {
+    position: relative;
+
+}
+
+.gnb > li > a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+.gnb > li:hover > a {
+    color: skyblue;
+    border: 1px solid skyblue;
+}
+
+.gnb ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 178px;
+    background-color: #ffffff;
+}
+
+.gnb ul li {}
+
+.gnb ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.gnb ul li:hover a {
+    background-color: skyblue;
+    color: #ffffff;
+}
+
+
+
+/* main */
+.main {
+    width: 800px;
+}
+
+
+/* slider */
+.slider {
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.slide {
+    height: 350px;
+    position: relative;
+}
+
+.slide a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.slide img {
+    width: 800px;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+
+/* contents */
+.contents {
+    height: 200px;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.tab {
+    flex: 1;
+    position: relative;
+}
+
+.tab_tit {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid skyblue;
+    cursor: pointer;
+}
+
+.tab_tit h3 {
+    display: block;
+    background-color: #eee;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.tab_tit h3.on {
+    background-color: skyblue;
+}
+
+.tab_cont {
+    height: 130px;
+    width: 100%;
+}
+
+.notice {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 6px;
+}
+
+.notice li {}
+
+.notice li a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 4px;
+}
+
+.notice li:hover a {
+    text-decoration: underline;
+}
+
+.gallery {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.gallery li {
+    float: left;
+    width: 32%;
+    margin-top: 30px;
+    margin-right: 4px;
+}
+
+.gallery li:last-child {
+    margin-right: 0;
+}
+
+.gallery img {
+    display: block;
+    width: 80px;
+    height: 50px;
+}
+
+.banner {
+    flex: 1;
+    cursor: pointer;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.links {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
+
+.links li a {
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    line-height: 86px;
+    background-color:#eee;
+}
+
+.links li:hover a {
+    background-color: skyblue;
+    color: #ffffff;
+}
+
+
+/* footer */
+.footer {
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.f_logo {
+    flex: 1;
+}
+
+.f_logo img {}
+
+.info {
+    flex: 8;
+}
+
+.f_menu {
+    margin-bottom: 12px;
+}
+
+.f_menu a {
+    margin: 0 10px;
+}
+
+.f_menu a:hover {
+    text-decoration: underline;
+}
+
+
+/* modal */
+#modal {
+    width: 500px;
+    height: 400px;
+    background-color: aliceblue;
+    border: 1px solid #333333;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#modal.popUp {
+    display: block;
+}
+
+#modal h3 {
+    font-size: 36px;
+}
+
+#modal p {
+    margin-top: 20px;
+}
+
+#modal .close{
+    cursor: pointer;
+    background-color: skyblue;
+    height: 26px;
+    width: 60px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 26px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
